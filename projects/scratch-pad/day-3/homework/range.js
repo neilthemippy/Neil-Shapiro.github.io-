@@ -24,12 +24,28 @@
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
     
+    if(start < end){
     
-    
+    var range1 = []; 
+
+    for(var i = start; i <= end; i++){
+
+     return range1.push(i); 
+         }
+    }  else {
+
+        var range2 = []; 
+
+    for(var i = start; i >= end; i--){
+
+     return range2.push(i); 
+    }
+
     
     // YOUR CODE GOES ABOVE HERE //
 }
 
+}
 
 
 

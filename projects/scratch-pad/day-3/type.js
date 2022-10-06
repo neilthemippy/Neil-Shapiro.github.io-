@@ -13,10 +13,17 @@
  * work?
  */
 function isArray(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
+    // YOUR CODE BELOW HERE // check to see if there is a method you can already use? check google 
+    // using Array.isArray method to return if the parameter is true or false 
+     
+    if (Array.isArray(value) === true){ 
+                return true; 
+        } else {
+        // checking with Array.isArray to revert to false if array is not array   
+            return false; 
+        }
+  
+ 
     
     // YOUR CODE ABOVE HERE //
 }
@@ -29,11 +36,22 @@ function isArray(value) {
  * null, not an Array, not a Date - all of these will return 'object' if used 
  * with typeof.
  */
-function isObject(value) {
+function isObject(value) { // 
     // YOUR CODE BELOW HERE //
+    if (typeof value === 'object' && value !== null 
+           // && Array.isArray(value) !== true && value !== instanceof Date
+            ){
+
+            return true; 
+    } else { 
+        
+        return false ; 
+    }
+
+     
+
     
-    
-    
+    // determine if typeof value is an object && value is not an array 
     
     // YOUR CODE ABOVE HERE //
 }
@@ -46,7 +64,12 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
+  /*  if (Array.isArray(value) === true || typeof value === 'object' && typeof value !== "null" && value !== instanceof Date){
+        return true;
+    } else if ({ 
+        return false; 
+    }
+*/
     
     
     
@@ -74,8 +97,21 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
+    // using if statement to pass value through the function to check the type of function 
+    if (Array.isArray(value)){ 
+        return 'array'; 
+        // checking if value is date 
+    } if (value instanceof Date){
+        return 'date'; 
+        // checking if value is null 
+    } if (value === null){
+        return 'null'; 
+        // return else statement if value has not been previously excecuted for above if statements 
+    } else {
+        return typeof value;
+    }
+
+
     
     
     // YOUR CODE ABOVE HERE //

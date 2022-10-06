@@ -33,14 +33,29 @@
  *      the exact case.
  */
 
+
+/* I: the input will be hour which is a number dataype
+    O: the output will be greeting which is a string 
+    C: function must look for a dataype other than a number 
+    E: Function must need a number datatype as a the input  
+    */
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
+    //using if else chain with logical operators to execute a certain block determined by the input 
+    if (hour >= 0 && hour <= 11){ 
+        console.log("Good Morning!"); 
+    } else if (hour >= 12 && hour <= 16){
+        console.log("Good Afternoon!");
+    } else if(hour >= 17 && hour <= 21){
+        console.log("Good Evening!");
+    } else if (hour >= 22 && hour <= 23 )
+        console.log("Good Night!"); 
+    }
     
     
     
     // YOUR CODE ABOVE HERE //
-}
+
 
 /*
  * To test our greeter when developing, we need to fake some input data, ie, 

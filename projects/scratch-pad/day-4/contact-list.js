@@ -33,22 +33,29 @@
  *          new-line character added after it!
  */
 
-// YOUR CODE GOES BELOW HERE //
-function makeContact(id, nameFirst, nameLast) {
+// YOUR CODE GOES BELOW HERE // this first part A 
+function makeContact(id, nameFirst, nameLast) { //Factory function 
 
 } 
 
 
-function makeContactList() {
+function makeContactList() {                    // also factory function allows us to make contact object, imagine its creating an array similar to the one in json 
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = []; 
     
     return {
-        // we implemented the length api for you //
+        // we implemented the length api for you // when this object gets outputed when can exeucte to get length of contacts 
         length: function() {
             return contacts.length;
+        }
+        addContact: function(contact){
+            contacts.push(contact); 
+
+        }, 
+        findContact: function(fullName){
+            //iterate through contacts using a for loop re
         }
     }
 }
